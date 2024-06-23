@@ -1,0 +1,68 @@
+<nav class="NavBar">
+  <ul class="Ul">
+    <li class="Li ">Home</li>
+    <li class="Li">About</li>
+    <li class="Li">Project</li>
+    <li class="Li">Blog</li>
+  </ul>
+</nav>
+
+<style is:global>
+/* Se agrego is:gobal para seleccionar los stilod desde cualquier parte del proyecto */
+  .NavBar{ /*Elemento Seleccionado*/
+    display: grid;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    left: 100%;
+    margin-top: 3rem;
+    transition: left 0.3s;
+    background: linear-gradient(#101818,#030712);
+    height: calc(100% - 40px);
+    z-index: 0; /*Lo posicionamos arriva*/
+  }
+  .NavBarVicible{ /*Elemento Seleccionado*/
+    left: 0;
+  }
+  .Ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    place-items: center;
+    gap: 1rem;
+  }
+  .Li{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .Li:hover{
+      padding-right: 0.2rem;
+      transition: all 0.5s;
+      background: white;
+      color: black;
+      padding: 3px 10px;
+      border-radius: 0.7rem;
+    }
+  @media(min-width: 768px){
+    .NavBar{
+      display: block;
+      position: static;
+      width: auto;
+      margin-top: 0;
+      background: none;
+    }
+    .Ul{
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      
+    }
+    .Li{
+      opacity: 80%;
+      font-size: 1rem;
+    }
+    .Li:hover{
+      padding: 3px 5px;
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+/*Tipamos los los Propms a Recivir*/
+interface Props {
+url: string;
+title: string;
+}
+/*Almacenamos los Promps a recivir*/
+const {url, title} = Astro.props;
+---
+
+<head>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+
+<div class="flex gap-2 place-items-center ">
+    <img src={url} alt="Logo" class='h-[30px] w-[30px] rounded-full opacity-70 img'/>
+    <h1 class="text-bold text-white title">{title}</h1>
+  </div>
+  
+  <style>
+   .title{
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  opacity: 80%;
+  z-index: 1;
+  } 
+  .img{
+  z-index: 1; /*Lo posicionamos debajo del menu*/
+  }
+  </style>

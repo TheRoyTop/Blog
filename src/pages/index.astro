@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Hero from '../section/HomePage/HeroPage.astro'
+---
+
+<Layout title="HomePage">
+	<main>
+	  <Hero />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem 1rem;
+		/*max-width: calc(100% - 2rem);*/
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		
+	}
+	@media(min-width:768px){
+	  main{
+	    padding: 1rem 0.5rem;
+	    margin: 0;
+	  }
+	}
+</style>

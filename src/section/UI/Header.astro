@@ -1,0 +1,63 @@
+---
+import Logo from './src/components/HeaderTitle.astro';
+import Nav from './src/components/NavComponent.astro';
+---
+
+<header class="h-[70px] flex place-items-center justify-between gap-2 pl-3 pr-3 md:pl-7 md:pr-7 text-white">
+  
+  <Logo url="/DevTop.jpeg" title="Devtop" />
+  <Nav />
+  <div class="md:hidden">
+    <button class="homeButton">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+  </div>
+</header>
+
+<style>
+  .homeButton {
+    display: flex;
+    flex-direction: column;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 0;
+    background: transparent;
+    gap: 0.35rem;
+    place-content: center;
+    cursor: pointer;  /* Cursor de puntero */
+  }
+  .homeButton > div {
+    background: white;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+    align-items: center;
+  }
+  /*Animacion del Button Haburguesa*/
+  /*Se agrego .active para manipularlo desde Js*/
+  .homeButton.active > div:first-child {
+    transform: rotate(39deg);
+  }
+  .homeButton.active > div:nth-child(2) {
+    opacity: 0;
+  }
+  .homeButton.active > div:last-child {
+    transform: rotate(-39deg);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".homeButton");
+    const navMenu = document.querySelector(".NavBar");
+  
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("NavBarVicible");
+      navToggle.classList.toggle("active");  // Alterna la clase 'active' en el botón
+    });
+  });
+</script>
