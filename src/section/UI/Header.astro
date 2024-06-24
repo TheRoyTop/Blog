@@ -1,6 +1,6 @@
 ---
-import Logo from './src/components/HeaderTitle.astro';
-import Nav from './src/components/NavComponent.astro';
+import Logo from '../../components/UiComponent/HeaderTitle.astro';
+import Nav from '../../components/HomeComponet/HeaderComponent/NavComponent.astro';
 ---
 
 <header class="h-[70px] flex place-items-center justify-between gap-2 pl-3 pr-3 md:pl-7 md:pr-7 text-white">
@@ -54,10 +54,14 @@ import Nav from './src/components/NavComponent.astro';
   document.addEventListener("DOMContentLoaded", function() {
     const navToggle = document.querySelector(".homeButton");
     const navMenu = document.querySelector(".NavBar");
-  
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("NavBarVicible");
-      navToggle.classList.toggle("active");  // Alterna la clase 'active' en el botón
-    });
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("NavBarVicible");
+        navToggle.classList.toggle("active");  // Alterna la clase 'active' en el botón
+      });
+    } else {
+      console.error("navToggle or navMenu not found");
+    }
   });
 </script>
