@@ -16,7 +16,7 @@ const {url, title} = Astro.props;
 </head>
 
 <div class="flex gap-2 place-items-center ">
-    <img src={url} alt="Logo" class='h-[30px] w-[30px] rounded-full opacity-70 img'/>
+    <img src={url} alt="Logo" class='h-[30px] w-[30px] rounded-full opacity-70 2xl:h-[70px] 2xl:w-[70px] img '/>
     <h1 class="text-bold text-white title">{title}</h1>
   </div>
   
@@ -25,7 +25,7 @@ const {url, title} = Astro.props;
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   opacity: 80%;
   z-index: 1;
   } 
@@ -35,6 +35,11 @@ const {url, title} = Astro.props;
   @media(min-width: 1024px){
   .title{
   font-size: 1.8rem;
+   }
+  }
+  @media(min-width: 1440px){
+  .title{
+  font-size: 2.5rem;
    }
   }
   </style>
