@@ -3,9 +3,10 @@
 interface Props {
 url: string;
 title: string;
+urltitle: string;
 }
 /*Almacenamos los Promps a recivir*/
-const {url, title} = Astro.props;
+const {url, title, urltitle} = Astro.props;
 ---
 
 <head>
@@ -15,9 +16,12 @@ const {url, title} = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 
-<div class="flex gap-2 place-items-center ">
+<div class=" ">
+  <a class="flex gap-2 place-items-center" href={urltitle}>
     <img src={url} alt="Logo" class='h-[30px] w-[30px] rounded-full opacity-70 2xl:h-[70px] 2xl:w-[70px] img '/>
-    <h1 class="text-bold text-white title">{title}</h1>
+    
+      <h1 class="text-bold text-white title">{title}</h1>
+    </a>
   </div>
   
   <style>

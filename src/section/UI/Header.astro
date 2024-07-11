@@ -5,8 +5,13 @@ import Nav from '../../components/HomeComponet/HeaderComponent/NavComponent.astr
 
 <header class="h-[4.5rem] flex place-items-center justify-between gap-2 pl-3 pr-3 text-white md:pl-[1rem] md:pr-[1rem]  2xl:h-[6rem] ">
   
-  <Logo url="/DevTop.jpeg" title="Devtop" />
+  <Logo
+  urltitle="/"
+  url="/DevTop.jpeg" 
+  title="Devtop" />
   <Nav />
+  
+  <!--Button home menu-->
   <div class="md:hidden">
     <button class="homeButton">
       <div></div>
@@ -48,13 +53,16 @@ import Nav from '../../components/HomeComponet/HeaderComponent/NavComponent.astr
   .homeButton.active > div:last-child {
     transform: rotate(-39deg);
   }
+
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const navToggle = document.querySelector(".homeButton");
     const navMenu = document.querySelector(".NavBar");
-
+    const LiToggle = document.querySelector(".Ul");
+    
+    //Se agrego un if para verificar y no probocar un Null
     if (navToggle && navMenu) {
       navToggle.addEventListener("click", () => {
         navMenu.classList.toggle("NavBarVicible");
@@ -62,6 +70,16 @@ import Nav from '../../components/HomeComponet/HeaderComponent/NavComponent.astr
       });
     } else {
       console.error("navToggle or navMenu not found");
+    }
+    
+   //En caso de error Eliminar
+    if (LiToggle && navMenu) {
+      LiToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("NavBarVicible");
+        navToggle.classList.toggle("active");  // Alterna la clase 'active' en el botón
+      });
+    } else {
+      console.error("LiToggle or navMenu not found");
     }
   });
 </script>

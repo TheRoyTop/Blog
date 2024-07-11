@@ -1,9 +1,17 @@
 <nav class="NavBar">
   <ul class="Ul">
-    <li class="Li ">Home</li>
-    <li class="Li">About</li>
-    <li class="Li">Project</li>
-    <li class="Li">Blog</li>
+    <li class="Li">
+      <a href="/">Home</a>
+      </li>
+    <li class="Li">
+      <a href="/about">About</a>
+      </li>
+    <li class="Li">
+      <a href="/project">Project</a>
+      </li>
+    <li class="Li">
+      <a href="/blog">Blog</a>
+      </li>
   </ul>
 </nav>
 
@@ -19,7 +27,7 @@
     transition: left 0.3s;
     background: linear-gradient(#101818,#030712);
     height: calc(100% - 40px);
-    z-index: 0; /*Lo posicionamos arriva*/
+    z-index: 1; /*Lo posicionamos arriva*/
   }
   .NavBarVicible{ /*Elemento Seleccionado*/
     left: 0;
@@ -27,7 +35,6 @@
   .Ul{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     place-items: center;
     gap: 1rem;
   }
@@ -65,9 +72,20 @@
       padding: 3px 5px;
     }
   }
-  @media(min-width: 1280px){
+  @media(min-width: 1024px){
     .Li{
       font-size: 1.5rem;
+    }
+    .Ul{
+      gap: 1rem;
+    }
+  }
+  @media(min-width: 1440px){
+    .Li{
+      font-size: 2rem;
+    }
+    .Ul{
+      gap: 1.2rem;
     }
   }
 </style>

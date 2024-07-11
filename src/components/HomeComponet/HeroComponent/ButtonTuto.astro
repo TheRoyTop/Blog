@@ -1,8 +1,9 @@
 ---
 interface Props {
 titleTuto: string;
+url: string;
 }
-const {titleTuto} = Astro.props;
+const {titleTuto, url} = Astro.props;
 ---
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +11,7 @@ const {titleTuto} = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
   <button class="ButtonTuto h-[2.5rem] w-[3rem] rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-500">
-          <a href="#UrlAqui" class="box">{titleTuto}</a>
+          <a href={url} class="box">{titleTuto}</a>
         </button>
   
   <style>

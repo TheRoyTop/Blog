@@ -1,8 +1,9 @@
 ---
 interface Props {
 titleEvento: string;
+url: string;
 }
-const {titleEvento} = Astro.props;
+const {titleEvento, url} = Astro.props;
 ---
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,7 @@ const {titleEvento} = Astro.props;
 </head>
 
 <button class="Grasient-Border">
-          <a href="#UrlAqui" class="box">{titleEvento}</a>
+          <a href={url} class="box">{titleEvento}</a>
         </button>
         
  <style>
@@ -21,11 +22,11 @@ const {titleEvento} = Astro.props;
 }
 .box{
   background-color: var(--bg);
-  padding: 0.3rem 1.1rem;
+  padding: 0.3rem 1rem;
   border-radius: 1rem;
   place-content: center;
   font-family: "Lilita One", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 .Grasient-Border{
