@@ -73,13 +73,17 @@ import Nav from '../../components/HomeComponet/HeaderComponent/NavComponent.astr
     }
     
    //En caso de error Eliminar
-    if (LiToggle && navMenu) {
-      LiToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("NavBarVicible");
-        navToggle.classList.toggle("active");  // Alterna la clase 'active' en el botón
-      });
+    if (LiToggle && navMenu && navToggle) {
+  LiToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("NavBarVicible");
+    if (navToggle) {
+      navToggle.classList.toggle("active");  // Alterna la clase 'active' en el botón
     } else {
-      console.error("LiToggle or navMenu not found");
+      console.error("navToggle not found");
     }
+  });
+} else {
+  console.error("LiToggle, navMenu, or navToggle not found");
+}
   });
 </script>
