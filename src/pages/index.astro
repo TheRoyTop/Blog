@@ -1,11 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../section/HomePage/HeroPage.astro'
+import Hero from '../section/HomePage/HeroPage.astro';
+import Category from '../section/Category/category.astro';
 ---
 
 <Layout title="HomePage">
-	<main>
-	  <Hero />
+	<main >
+	  <Hero /> <!-- Contiene la section Hero -->
+	  <h1 class="grid mb-5 place-content-center md:block md:ml-6">
+	    Category
+	  </h1>
+	  <Category />
 	</main>
 </Layout>
 
@@ -19,7 +24,7 @@ import Hero from '../section/HomePage/HeroPage.astro'
 		line-height: 1.6;
 		
 	}
-	@media(min-width:768px){
+	@media(min-width: 768px){
 	  main{
 	    padding: 1rem 0.5rem;
 	    margin: 0;

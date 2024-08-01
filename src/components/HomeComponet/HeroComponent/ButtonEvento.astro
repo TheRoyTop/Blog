@@ -6,55 +6,23 @@ url: string;
 const {titleEvento, url} = Astro.props;
 ---
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">-->
+</head> 
 
-<button class="Grasient-Border">
-          <a href={url} class="box">{titleEvento}</a>
-        </button>
+<button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-32 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full"><a href={url} >{titleEvento}</a>        </button>
+
+
+
         
  <style>
-   :root {
-  --bg: #111828;
+   
 
-}
-.box{
-  background-color: var(--bg);
-  padding: 0.3rem 1rem;
-  border-radius: 1rem;
-  place-content: center;
+/*.box{
+  
   font-family: "Lilita One", sans-serif;
   font-weight: 300;
   font-style: normal;
-}
-.Grasient-Border{
-  height: 2.3rem;
-  width: 9.3rem;
-  border-radius: 1rem;
-  background: linear-gradient(#ead759,#9d8c21);
-}
-.box:hover{
-  background: none;
-}
-@media(min-width: 1024px ){
-  .box{
-    padding: 0.3rem 3rem;
-  }
-  .Grasient-Border{
-    height: 2.5rem;
-    width: 13rem;
-  }
-}
-@media(min-width: 1536px ){
-  .box{
-    padding: 0.6rem 1.5rem;
-    font-size: 40px;
-  }
-  .Grasient-Border{
-    height: 4.5rem;
-    width: 17rem;
-  }
-}
+}*/
  </style>

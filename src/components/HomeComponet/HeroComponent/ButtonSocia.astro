@@ -1,12 +1,28 @@
 ---
 interface Props {
 path: string;
+path2: string;
 url: string;
 }
-const {path,url} = Astro.props;
+const {path,path2,url} = Astro.props;
 ---
-<div class="flex ">
- <a href={url} class="flex rounded-full bg-white opacity-90 h-10 w-10 p-2 md:h-[3.2rem] md:w-[3.2rem] md:mt-52 xl:mt-64  2xl:mt-[26rem] 2xl:h-20 2xl:w-20 place-content-center"> 
+ <a href={url} class="flex rounded-full bg-white opacity-90 h-11 w-11 p-2 md:h-[3.2rem] md:w-[3.2rem] md:mt-52 xl:mt-64  2xl:mt-[26rem] 2xl:h-20 2xl:w-20 place-content-center"> 
    <img src={path} alt="RedSocial" />
   </img>
-</img>
+
+<!--<a href={url}>
+  <svg class="md:mt-52 xl:mt-64 2xl:mt-[26rem] h-10 w-10 md:h-[3.2rem] md:w-[3.2rem] 2xl:h-20 2xl:w-20"
+xmlns="http://www.w3.org/2000/svg" 
+width="24"     
+height="24"    
+viewBox="0 0 24 24"  
+fill="none"     
+stroke="currentColor"      
+stroke-width="2"   
+stroke-linecap="round"     
+stroke-linejoin="round"   
+class="h-8 w-8 text-white xl:mt-64">
+<path d={path}></path>
+<path d={path2}></path>
+ </svg>
+</a>-->
